@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Computing Revision Guide</title>
+  <title>🧠 Computing Revision Guide</title>
   <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: "Segoe UI", sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
       line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
       padding: 20px;
-      max-width: 1000px;
-      margin: auto;
     }
 
     h1, h2, h3 {
@@ -21,21 +26,93 @@
     }
 
     h1 {
-      color: #2c3e50;
       text-align: center;
+      font-size: 2.5rem;
+      color: #00ffe1;
+      text-shadow: 0 0 10px rgba(0,255,224,0.3);
     }
 
     h2 {
-      color: #2980b9;
-      border-bottom: 1px solid #ddd;
+      color: #00ffe1;
+      border-bottom: 1px solid #333;
+      padding-bottom: 5px;
     }
 
     h3 {
-      color: #34495e;
+      color: #fff;
     }
 
     ul, ol {
       padding-left: 20px;
+    }
+
+    a {
+      color: #00ffe1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      margin: 0 10px;
+      display: inline-block;
+      padding: 10px 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(0, 255, 224, 0.2);
+    }
+
+    /* Card Container */
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 255, 224, 0.2);
+    }
+
+    pre {
+      background: #1e1e1e;
+      padding: 10px;
+      overflow-x: auto;
+      border-radius: 10px;
+      font-size: 0.95em;
+    }
+
+    code {
+      background: #2a2a2a;
+      padding: 2px 4px;
+      border-radius: 5px;
+      color: #00ffe1;
+    }
+
+    .diagram {
+      white-space: pre-wrap;
+      background: #1e1e1e;
+      padding: 10px;
+      border-radius: 10px;
+      font-family: monospace;
+      color: #00ffe1;
+      margin: 10px 0;
     }
 
     .table-container {
@@ -44,71 +121,31 @@
     }
 
     table {
+      min-width: 600px;
       width: 100%;
       border-collapse: collapse;
-      min-width: 600px; /* Ensures horizontal scrolling if needed */
+      background: #1e1e1e;
+      color: #f0f0f0;
+      border-radius: 10px;
+      overflow: hidden;
     }
 
     th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: left;
+      border: 1px solid #333;
+      padding: 10px;
       white-space: nowrap;
     }
 
-    pre {
-      background: #f1f1f1;
-      padding: 10px;
-      border-radius: 5px;
-      overflow-x: auto;
-    }
-
-    .diagram {
-      white-space: pre-wrap;
-      background: #f0f0f0;
-      padding: 10px;
-      border-left: 4px solid #2980b9;
-      margin: 10px 0;
-      font-family: monospace;
-      border-radius: 4px;
-    }
-
-    .code-example {
-      background: #272822;
-      color: #f8f8f2;
-      padding: 10px;
-      border-radius: 5px;
-      font-family: monospace;
+    th {
+      background-color: #2a2a2a;
+      color: #00ffe1;
     }
 
     footer {
       text-align: center;
       margin-top: 50px;
-      color: #aaa;
-    }
-
-    nav {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #3498db;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px auto;
-        text-align: center;
-      }
+      color: #777;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -125,7 +162,7 @@
   </nav>
 
   <!-- Computational Thinking -->
-  <section id="comp-think">
+  <section id="comp-think" class="card">
     <h2>🧠 1. Computational Thinking</h2>
     <p>A method of problem-solving that involves breaking problems down and using techniques like abstraction, decomposition, pattern recognition, and algorithm design.</p>
 
@@ -188,7 +225,7 @@
   </section>
 
   <!-- Data -->
-  <section id="data">
+  <section id="data" class="card">
     <h2>💾 2. Data</h2>
     <h3>ASCII (American Standard Code for Information Interchange)</h3>
     <ul>
@@ -228,7 +265,7 @@
   </section>
 
   <!-- Networks -->
-  <section id="networks">
+  <section id="networks" class="card">
     <h2>🌐 3. Networks</h2>
     <h3>Protocols</h3>
     <p>Rules that govern how devices communicate over a network.</p>
@@ -268,7 +305,7 @@
   </section>
 
   <!-- Computers -->
-  <section id="computers">
+  <section id="computers" class="card">
     <h2>💻 4. Computers</h2>
     <h3>Operating Systems (OS)</h3>
     <p>Software that manages hardware and software resources</p>
@@ -353,7 +390,7 @@
   </section>
 
   <!-- Issues -->
-  <section id="issues">
+  <section id="issues" class="card">
     <h2>⚠️ 5. Issues and Impact</h2>
     <h3>Replacement Cycle</h3>
     <p>Refers to how often technology (like computers, phones) is replaced</p>
@@ -389,7 +426,7 @@
   </section>
 
   <!-- Summary Table -->
-  <section>
+  <section class="card">
     <h2>✅ Summary Table</h2>
     <div class="table-container">
       <table>
