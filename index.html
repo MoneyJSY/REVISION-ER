@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computing Revision Guide</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2980b9;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h3 {
+      color: #34495e;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 10px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px; /* Ensures horizontal scrolling if needed */
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    pre {
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    .diagram {
+      white-space: pre-wrap;
+      background: #f0f0f0;
+      padding: 10px;
+      border-left: 4px solid #2980b9;
+      margin: 10px 0;
+      font-family: monospace;
+      border-radius: 4px;
+    }
+
+    .code-example {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: monospace;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #aaa;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧠 Computing Revision Guide</h1>
+
+  <nav>
+    <a href="#comp-think">Comp. Thinking</a>
+    <a href="#data">Data</a>
+    <a href="#networks">Networks</a>
+    <a href="#computers">Computers</a>
+    <a href="#issues">Issues</a>
+  </nav>
+
+  <!-- Computational Thinking -->
+  <section id="comp-think">
+    <h2>🧠 1. Computational Thinking</h2>
+    <p>A method of problem-solving that involves breaking problems down and using techniques like abstraction, decomposition, pattern recognition, and algorithm design.</p>
+
+    <h3>Key Concepts:</h3>
+    <ul>
+      <li><strong>Decomposition:</strong> Breaking a complex problem into smaller, more manageable parts.</li>
+      <li><strong>Abstraction:</strong> Removing unnecessary details to focus on what’s important.</li>
+      <li><strong>Pattern Recognition:</strong> Identifying similarities or patterns in problems.</li>
+      <li><strong>Algorithm Design:</strong> Creating step-by-step instructions to solve a problem (e.g., pseudocode, flowcharts).</li>
+    </ul>
+
+    <h3>Sub Programs</h3>
+    <p>Also known as functions or procedures.</p>
+    <h4>Why Use Them?</h4>
+    <ul>
+      <li>Reuse code</li>
+      <li>Improve readability</li>
+      <li>Make debugging easier</li>
+    </ul>
+
+    <h4>Types:</h4>
+    <ul>
+      <li><strong>Functions:</strong> Return a value (e.g., <code>add(a, b)</code>)</li>
+      <li><strong>Procedures:</strong> Perform an action but do not return a value</li>
+    </ul>
+
+    <h4>Parameters:</h4>
+    <ul>
+      <li>Data passed into a subprogram (can be by value or reference)</li>
+    </ul>
+
+    <h3>Search and Sort Algorithms</h3>
+    <h4>Linear Search</h4>
+    <ul>
+      <li>Checks each item in a list until it finds the target</li>
+      <li>Works on <strong>unsorted</strong> data</li>
+      <li>Time complexity: O(n)</li>
+    </ul>
+
+    <h4>Binary Search</h4>
+    <ul>
+      <li>Efficient for <strong>sorted</strong> data</li>
+      <li>Repeatedly divides the search interval in half</li>
+      <li>Time complexity: O(log n)</li>
+    </ul>
+
+    <h4>Bubble Sort</h4>
+    <ul>
+      <li>Compares adjacent items and swaps if they’re in the wrong order</li>
+      <li>Repeats until the list is sorted</li>
+      <li>Time complexity: O(n²)</li>
+    </ul>
+
+    <h4>Merge Sort</h4>
+    <ul>
+      <li>Divide-and-conquer algorithm</li>
+      <li>Splits the list into halves, sorts them, then merges them</li>
+      <li>Time complexity: O(n log n)</li>
+    </ul>
+  </section>
+
+  <!-- Data -->
+  <section id="data">
+    <h2>💾 2. Data</h2>
+    <h3>ASCII (American Standard Code for Information Interchange)</h3>
+    <ul>
+      <li>A character encoding standard</li>
+      <li>Uses <strong>7 bits</strong>, representing 128 characters (letters, digits, symbols, control codes)</li>
+      <li>Example: 'A' = 65 in ASCII</li>
+    </ul>
+
+    <h3>Binary</h3>
+    <ul>
+      <li>Base-2 number system (0s and 1s)</li>
+      <li>Used internally by computers to represent data and instructions</li>
+    </ul>
+
+    <h4>Conversions:</h4>
+    <ul>
+      <li><strong>Binary → Decimal:</strong> Add values of positions where there's a 1</li>
+      <li><strong>Decimal → Binary:</strong> Divide by 2 and record remainders</li>
+    </ul>
+
+    <h3>File Size Equations</h3>
+    <h4>Units:</h4>
+    <ul>
+      <li>1 byte = 8 bits</li>
+      <li>1 KB = 1024 bytes</li>
+      <li>1 MB = 1024 KB</li>
+      <li>1 GB = 1024 MB</li>
+      <li>1 TB = 1024 GB</li>
+    </ul>
+
+    <h4>Image File Size:</h4>
+    <pre>File size = Width × Height × Color Depth</pre>
+    <p>Color depth = bits per pixel (e.g., 24-bit color uses 3 bytes per pixel)</p>
+
+    <h4>Sound File Size:</h4>
+    <pre>File size = Sample rate × Bit depth × Duration × Channels</pre>
+  </section>
+
+  <!-- Networks -->
+  <section id="networks">
+    <h2>🌐 3. Networks</h2>
+    <h3>Protocols</h3>
+    <p>Rules that govern how devices communicate over a network.</p>
+    <h4>Common Protocols:</h4>
+    <ul>
+      <li><strong>HTTP/HTTPS:</strong> Web browsing (secure with SSL/TLS)</li>
+      <li><strong>FTP:</strong> File transfer</li>
+      <li><strong>SMTP/POP3/IMAP:</strong> Email transmission/receiving</li>
+      <li><strong>TCP/IP:</strong> Core internet protocols (reliable delivery + addressing/routing)</li>
+    </ul>
+
+    <h4>TCP vs UDP</h4>
+    <div class="table-container">
+      <table>
+        <tr><th>Feature</th><th>TCP</th><th>UDP</th></tr>
+        <tr><td>Connection</td><td>Yes (handshake)</td><td>No</td></tr>
+        <tr><td>Speed</td><td>Slower</td><td>Faster</td></tr>
+        <tr><td>Reliability</td><td>High (acknowledgements)</td><td>Low</td></tr>
+        <tr><td>Use cases</td><td>Web pages, files</td><td>Streaming, gaming</td></tr>
+      </table>
+    </div>
+
+    <h3>Transfer Equations</h3>
+    <h4>Bandwidth:</h4>
+    <p>The maximum amount of data that can be transferred per second (measured in bps – bits per second)</p>
+
+    <h4>Transfer Time:</h4>
+    <pre>Transfer time = File size / Bandwidth</pre>
+    <p>Make sure units match (convert file size to bits if bandwidth is in bps)</p>
+
+    <h3>Network Topology</h3>
+    <div class="diagram">
+[Client] ⇄ [Router] ⇄ [Server]
+            ↑
+         [Internet]
+    </div>
+  </section>
+
+  <!-- Computers -->
+  <section id="computers">
+    <h2>💻 4. Computers</h2>
+    <h3>Operating Systems (OS)</h3>
+    <p>Software that manages hardware and software resources</p>
+    <ul>
+      <li>Provides user interface and runs applications</li>
+      <li>Functions:</li>
+      <ul>
+        <li>Memory management</li>
+        <li>Process scheduling</li>
+        <li>File management</li>
+        <li>Device drivers</li>
+        <li>Security and user access control</li>
+      </ul>
+    </ul>
+
+    <h3>Embedded Systems</h3>
+    <ul>
+      <li>Special-purpose systems built into larger devices</li>
+      <li>Examples: washing machines, car ECUs, smartwatches</li>
+      <li>Usually run real-time operating systems (RTOS)</li>
+      <li>Designed for efficiency, reliability, and low power usage</li>
+    </ul>
+
+    <h3>CPU & Von Neumann Architecture</h3>
+    <h4>Components:</h4>
+    <ul>
+      <li><strong>Control Unit (CU):</strong> Directs operations</li>
+      <li><strong>Arithmetic Logic Unit (ALU):</strong> Performs calculations and logic</li>
+      <li><strong>Registers:</strong> Fast internal storage (e.g., MAR, MDR, PC, ACC)</li>
+      <li><strong>System Bus:</strong> Connects CPU, memory, and peripherals</li>
+    </ul>
+
+    <h4>Von Neumann Features:</h4>
+    <ul>
+      <li>Stores both <strong>data and instructions</strong> in memory</li>
+      <li>Fetch-Decode-Execute cycle</li>
+    </ul>
+
+    <h4>Bottleneck:</h4>
+    <p>Only one bus between CPU and memory ⇒ limits speed</p>
+
+    <h4>Diagram: CPU Architecture</h4>
+    <div class="diagram">
+┌────────────────────────────┐
+│           CPU              │
+├────────────┬───────────────┤
+│ Control    │ Arithmetic    │
+│ Unit (CU)  │ Logic Unit    │
+│            │ (ALU)         │
+└────────────┴───────────────┘
+            ↑
+        Registers
+            ↑
+       System Bus
+            ↑
+     Memory / I/O Devices
+    </div>
+
+    <h3>Fetch-Decode-Execute Cycle</h3>
+    <div class="diagram">
+[Fetch Instruction from RAM]
+          ↓
+[Decode Instruction]
+          ↓
+[Execute Instruction]
+          ↓
+[Repeat]
+    </div>
+
+    <h3>High-Level vs Low-Level Languages</h3>
+    <div class="table-container">
+      <table>
+        <tr><th>Feature</th><th>High-Level Language</th><th>Low-Level Language</th></tr>
+        <tr><td>Abstraction</td><td>Very abstracted from hardware</td><td>Close to machine code</td></tr>
+        <tr><td>Examples</td><td>Python, Java, C#</td><td>Assembly, Machine code</td></tr>
+        <tr><td>Portability</td><td>Portable</td><td>Not portable</td></tr>
+        <tr><td>Ease of use</td><td>Easier to read/write/debug</td><td>Harder</td></tr>
+        <tr><td>Execution speed</td><td>Slower</td><td>Faster</td></tr>
+        <tr><td>Compilation needed</td><td>Yes</td><td>Assembler required</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Issues -->
+  <section id="issues">
+    <h2>⚠️ 5. Issues and Impact</h2>
+    <h3>Replacement Cycle</h3>
+    <p>Refers to how often technology (like computers, phones) is replaced</p>
+    <ul>
+      <li>Driven by planned obsolescence, performance improvements, marketing</li>
+    </ul>
+    <h4>Environmental Impact:</h4>
+    <ul>
+      <li>E-waste</li>
+      <li>Resource depletion (rare metals)</li>
+      <li>Energy consumption</li>
+    </ul>
+
+    <h3>How Malware Works</h3>
+    <h4>Types of Malware:</h4>
+    <ul>
+      <li><strong>Virus:</strong> Attaches to programs/files, spreads when executed</li>
+      <li><strong>Worm:</strong> Self-replicating, spreads across networks</li>
+      <li><strong>Trojan:</strong> Disguised as legitimate software</li>
+      <li><strong>Spyware:</strong> Secretly gathers user info</li>
+      <li><strong>Ransomware:</strong> Encrypts files and demands payment</li>
+      <li><strong>Adware:</strong> Displays unwanted ads</li>
+    </ul>
+
+    <h4>Protection:</h4>
+    <ul>
+      <li>Antivirus software</li>
+      <li>Firewalls</li>
+      <li>Regular updates</li>
+      <li>Avoid suspicious links/downloads</li>
+      <li>Strong passwords and 2FA</li>
+    </ul>
+  </section>
+
+  <!-- Summary Table -->
+  <section>
+    <h2>✅ Summary Table</h2>
+    <div class="table-container">
+      <table>
+        <tr><th>Topic</th><th>Key Points</th></tr>
+        <tr><td><strong>Computational Thinking</strong></td><td>Decomposition, abstraction, algorithms</td></tr>
+        <tr><td><strong>Subprograms</strong></td><td>Functions/procedures, parameters, reusability</td></tr>
+        <tr><td><strong>Search/Sort Algorithms</strong></td><td>Linear/Binary search; Bubble/Merge sort</td></tr>
+        <tr><td><strong>ASCII/Binary</strong></td><td>Encoding standards, binary math</td></tr>
+        <tr><td><strong>File Size Calculations</strong></td><td>Images, audio, unit conversions</td></tr>
+        <tr><td><strong>Network Protocols</strong></td><td>HTTP, FTP, TCP/IP, SMTP, etc.</td></tr>
+        <tr><td><strong>Transfer Time</strong></td><td>File size ÷ bandwidth</td></tr>
+        <tr><td><strong>Operating Systems</strong></td><td>Manage resources, UI, process scheduling</td></tr>
+        <tr><td><strong>Embedded Systems</strong></td><td>Real-time, dedicated purpose</td></tr>
+        <tr><td><strong>CPU / Von Neumann</strong></td><td>CU, ALU, registers, FDE cycle</td></tr>
+        <tr><td><strong>High/Low Level Langs</strong></td><td>Abstraction levels, portability, execution</td></tr>
+        <tr><td><strong>Replacement Cycle</strong></td><td>Planned obsolescence, e-waste issues</td></tr>
+        <tr><td><strong>Malware</strong></td><td>Virus, worm, trojan, ransomware, prevention</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>Created for educational purposes • 2025</p>
+  </footer>
+
+</body>
+</html>
